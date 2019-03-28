@@ -1,10 +1,10 @@
 import pandas as pd
-df = pd.read_csv('C:/Users/ccs/Documents/dict_mapping/zp2shuju.csv') ##表明需要是英文名？
+df = pd.read_csv('C:/Users/ccs/Documents/dict_mapping/baoxianxiangxi.csv') ##表明需要是英文名？
 print(df)
 code_mapping = {}
 for index,row in df.iterrows():
     if row['字段名']:
-        code_mapping[row['字段名']] = row['字段代码']
+        code_mapping[row['字段名']] = row['字段描述']
     else:
         continue
 
@@ -35,12 +35,14 @@ print(code_mapping)
 #RFID设备采集数据
 {'采集ID号': 'id', 'EPC码（车型和车辆使用性质）': 'EPC', '电子牌卡号': 'EID', '车牌号': 'CONTENT1', '档案号': 'CONTENT2', '采集点名称': 'READER', '采集天线号': 'ANTENNA', '采集时间': 'TIME', '采集状态': 'RESULT', '阅读器IP': 'READERIP', nan: nan}
 
-#川哥抓拍1数据
+#抓拍1数据
 {'记录ID号': 'RECORD_ID', '卡口编号': 'TOLLGATE_CODE2', '车道编号': 'LANE_INDEX2', '车道类型': 'LANE_DIR2', '经过时刻': 'PASS_TIME2', '号牌数量': 'PLATE_NUMBER', '号牌一致': 'PLATE_COINCIDE', '号牌颜色': 'PLATE_COLOR', '号牌种类': 'PLATE_TYPE', '尾部号牌置信度(即是车牌号码)': 'BACKEND_PLATE_CODE', '尾部号牌颜色': 'BACKEND_PLATE_COLOR', '尾部号牌种类': 'BACKEND_PLATE_TYPE', '车辆品牌': 'VEHICLE_BRAND', '车身颜色深浅': 'VEHICLE_COLORDEPTH', '车身颜色': 'VEHICLE_COLOR', '车辆类型': 'VEHICLE_TYPE', '车外廓长': 'VEHICLE_LENGTH', '车辆速度': 'VEHICLE_SPEED', '执法限速': 'LIMIT_SPEED', '行驶状态': 'DRIVE_STATUS', '图像数量': 'PIC_NUMBER', '第1张图像路径': 'PIC1_NAME', '第2张图像路径': 'PIC2_NAME', '第3张图像路径': 'PIC3_NAME', '第4张图像路径': 'PIC4_NAME', '车牌图像路径': 'PLATE_PIC', '识别时间': 'IDENTIFY_TIME', '识别状态': 'IDENTIFY_STATUS', '处理标记': 'DEAL_TAG', nan: 'BUTTED_TRANS_FLAG2', '地点编号': 'PLACE_CODE', '采集类型': 'EQUIPMENT_TYPE', '更新时间': 'UPDATE_TIME', '号牌置信度': 'PLATE_CONFIDENCE', '尾部号牌置信度': 'REAR_PLATE_CONFIDENCE'}
 
 
-#川哥抓拍2数据
+#抓拍2数据
 {'记录ID号': 'RECORD_ID', '卡口编号': 'TOLLGATE_CODE', '车道编号': 'LANE_INDEX', '车道类型': 'LANE_DIR', '经过时刻': 'PASS_TIME2', '号牌数量': 'PLATE_NUMBER', '号牌一致': 'PLATE_COINCIDE', '号牌颜色': 'PLATE_COLOR', '号牌种类': 'PLATE_TYPE', '尾部号牌置信度(即是车牌号码)': 'BACKEND_PLATE_CODE', '尾部号牌颜色': 'BACKEND_PLATE_COLOR', '尾部号牌种类': 'BACKEND_PLATE_TYPE', '车辆品牌': 'VEHICLE_BRAND', '车身颜色深浅': 'VEHICLE_COLORDEPTH', '车身颜色': 'VEHICLE_COLOR', '车辆类型': 'VEHICLE_TYPE', '车外廓长': 'VEHICLE_LENGTH', '车辆速度': 'VEHICLE_SPEED', '执法限速': 'LIMIT_SPEED', '行驶状态': 'DRIVE_STATUS', '图像数量': 'PIC_NUMBER', '第1张图像路径': 'PIC1_NAME', '第2张图像路径': 'PIC2_NAME', '第3张图像路径': 'PIC3_NAME', '第4张图像路径': 'PIC4_NAME', '车牌照片路径': 'PLATE_PIC', '识别时间': 'IDENTIFY_TIME', '识别状态': 'IDENTIFY_STATUS', '处理标记': 'DEAL_TAG', '地点编号': 'PLACE_CODE', '采集类型': 'EQUIPMENT_TYPE', '更新时间': 'UPDATE_TIME', '号牌置信度': 'PLATE_CONFIDENCE', '尾部号牌置信度': 'REAR_PLATE_CONFIDENCE'}
 
+#保险数据详细版本
+{'ID': '主键', 'REPORT_CODE': '报案编号', 'AUDIT_CODE': '审批编号', 'REPORT_NO': '报告编号', 'INSURANCE_COMP_ID': '保险公司', 'APPLY_TYPE': '查询类型', 'DRIVER': '驾驶人', 'ID_NUMBER': '身份证号', 'DRIVER_LICENCE_ID': '驾驶证号', 'PLATE': '车牌', 'PLATE_COLOR': '车牌颜色', 'VEHICLE_MODEL': '车辆品牌', 'OCCUR_TIME': '出险时间', 'PROPOSER': '申请人', 'APPLY_TIME': '申请时间', 'AUDITOR': '好运通坐席', 'ASSESSMENT_OF_LOSS': '估损金额', 'ATTACHMENT': '附件', 'SEARCH_REASON': '查询原因', 'SEARCH_START': '查询申请时间', 'SEARCH_END': '查询结束时间', 'ACCIDENT_SPOT': '事故地点', 'STATUS': '状态', 'THIRDPLATE': '三者车牌', 'THIRD_PLATE_COLOR': '三者车牌颜色', 'THIRD_VEHICLE_MODEL': '三者车型', 'THIRD_ASSESSMENT_OF_LOSS': '三者车估价', 'REMARK': '备注', 'DRIVERPHOTO': '驾驶员照片', 'ACCIDENTPHOTO': '事故照片路径', 'ISTHIRDJOIN': '是否第三方公司参与', 'ACCIDENTTYPE': '事故类型', 'QUERY_RESULTS': '查询结果', 'COMMITMENTID': '承诺函', nan: nan}
 
 """
