@@ -1,6 +1,7 @@
 import pandas as pd
-df = pd.read_csv('C:/Users/ccs/Documents/dict_mapping/baoxianxiangxi.csv') ##表明需要是英文名？
-print(df)
+df = pd.read_csv('C:/Users/ccs/Documents/dict_mapping/mmc2.csv') ##表明需要是英文名？
+print(df[1:10])
+"""
 code_mapping = {}
 for index,row in df.iterrows():
     if row['字段名']:
@@ -9,6 +10,8 @@ for index,row in df.iterrows():
         continue
 
 print(code_mapping)
+"""
+
 """
 #电子牌发牌详情
 {'电子牌序号': 'id1', '发卡原因（代码）': 'id2', '发卡时间': 'id3', '发卡单位代码': 'id4', '发卡单位名称': 'id5', '发卡人ID': 'id6', '发卡人姓名': 'id7', '发卡点编号': 'id8', '发卡点名称': 'id9', '卡状态        ': 'id10', '注销原因': 'id11', '注销原因说明': 'id12', '注销时间': 'id13', '注销单位代码': 'id14', '注销单位名称': 'id15', '注销人ID': 'id16', '注销人姓名': 'id17', '机动车序号': 'id18', '号牌省份': 'id19', '号牌种类': 'id20', '号牌号码': 'id21', '车辆识别代号': 'id22', '车辆类型': 'id23', '使用性质': 'id24', '审验截止日期': 'id25', '写卡时间': 'id26', '写卡单位代码': 'id27', '写卡单位名称': 'id28', '写卡操作人': 'id29', '写卡操作人名称  ': 'id30', ' 写卡原因': 'id31', '写卡点编号': 'id32', '写卡点名称': 'id33', '写卡读写器设备电路版号': 'id34', '转递记录类型': 'id35', '主城区车辆': 'id36', '发卡原因（中文）': 'id37', '车辆领卡顺序号': 'id38'}
