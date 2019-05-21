@@ -1,16 +1,19 @@
+# -*- coding: utf-8 -*-
+# @Time    : 19-2-13 下午9:39
+# @Author  : ccs
 import pandas as pd
-df = pd.read_csv('C:/Users/ccs/Documents/dict_mapping/mmc2.csv') ##表明需要是英文名？
+df = pd.read_csv('C:/Users/ccs/Desktop/xzqh.csv',sep=',',encoding='gbk') ##表明需要是英文名？
 print(df[1:10])
-"""
+
 code_mapping = {}
 for index,row in df.iterrows():
-    if row['字段名']:
-        code_mapping[row['字段名']] = row['字段描述']
+    if row['yb']:
+        code_mapping[str(row['yb'])] = row['qh']
     else:
         continue
 
 print(code_mapping)
-"""
+
 
 """
 #电子牌发牌详情

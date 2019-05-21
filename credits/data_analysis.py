@@ -3,6 +3,7 @@ kmeans=MiniBatchKMeans(n_clusters=2)
 kmeans.fit(df.values)
 """
 
+import scorecardpy
 
 import pandas as pd
 from scipy import stats
