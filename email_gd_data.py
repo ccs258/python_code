@@ -10,8 +10,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import pandas as pd
 
-_user = "it@socialcredits.cn"
-_pwd = "cms.2016.2018"
+_user = "xx"
+_pwd = "xx"
 _to = ["115491154@qq.com"]
 
 
