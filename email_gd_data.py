@@ -15,7 +15,6 @@ _pwd = "xx"
 _to = ["115491154@qq.com"]
 
 
-# _to = ["yong.bai@socialcredits.cn"]
 
 """
 区分：/usr/lib/python3.5/email/message.py ----
